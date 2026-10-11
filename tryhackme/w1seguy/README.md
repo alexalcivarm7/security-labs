@@ -11,7 +11,7 @@ Status: completado
 
 # W1seGuy
 
-<img src="screenshots/icono_w1seguy.png" alt="Icono de la sala W1seGuy" width="120">
+<img src="screenshots/icono_w1seguy.png" alt="Icono de la sala W1seGuy" width="300">
 
 > Reto centrado en la criptografía.
 
@@ -30,7 +30,7 @@ El desafío consistía en recuperar dos flags de un servicio que utilizaba cifra
 <!-- Todo lo que el enunciado o el análisis inicial te da. -->
 
 * Existen 2 flags
-* Las flags empieza por "THM{" y terminan en "}"
+* Las flags empiezan por "THM{" y terminan en "}"
 * Puerto 1337 TCP en escucha
 * La clave se repite cada 5 caracteres
 
@@ -40,19 +40,19 @@ El desafío consistía en recuperar dos flags de un servicio que utilizaba cifra
 
 <!-- Explica tu razonamiento: qué hipótesis planteaste y por qué. -->
 
-**Qué observé:** Al inspeccionar el codigo vemos que la flag está cifrada mediante XOR usando una clave de 5 caracteres que se repetia durante todo el proceso.<br>
+**Qué observé:** Al inspeccionar el codigo vemos que la flag está cifrada mediante XOR usando una clave de 5 caracteres que se repetía durante todo el proceso.<br>
 
 **Qué hipótesis formulé:** Si conozco que la flag inicia con "THM{" y finaliza con "}", podemos recuperar byte a byte con la propiedad 
 CLAVE = Ciphertext XOR PlainText. <br>
 
-**Cómo la validé:** Mediante un script en Python para recuperar automaticamante los caracteres de la clave a mpartir del texto conocido y posterior descifrar el mensaje completo. La salida obtenida produjo una flag valida, confirmando la hipotesis.
+**Cómo la validé:** Mediante un script en Python para recuperar automáticamante los caracteres de la clave a partir del texto conocido y posteriormente descifrar el mensaje completo. La salida obtenida produjo una flag valida, confirmando la hipotesis.
 
 ## Solución paso a paso
 
 **1.** Establecí la conexion a la IP de la maquina por el puerto que estaba en escucha.<br>
 **2.** Analizar el archivo.py para encontrar pistas.<br>
-**3.** Generé un xor_decrypt.py para decifrar la clave que me entregó la conexion netcat.<br>
-**4.** Ingresar la clave encriptada.<br>
+**3.** Generé un xor_decrypt.py para descifrar la clave que me entregó la conexion netcat.<br>
+**4.** Ingresar la clave recuperada.<br>
 **5.** Entregar las flags encontradas.<br>
 
 ```bash
@@ -60,24 +60,26 @@ CLAVE = Ciphertext XOR PlainText. <br>
 ```
 
 ```bash
-# nano xor_descrypt.py
-# chmod -x xor_descrypt.py
-# python xor_descrypt.py
+# nano xor_decrypt.py
+# chmod +x xor_decrypt.py
+# python xor_decrypt.py
 ```
 
-**Evidencia:** [/screenshots/W1seGuy.png](https://github.com/alexalcivarm7/security-labs/tree/main/tryhackme/w1seguy/screenshots)
+**Evidencia:** 
+
+<img src="screenshots/w1seguy.png" alt="Icono de la sala W1seGuy">
 
 ---
 
 ## Técnica aprendida
 
 <!-- Explica la idea general para que sirva en otros retos, no solo en este. -->
-Cifrado XOR
+Con XOR de clave repetida, conocer parte del texto original permite recuperar la clave (clave = cifrado ⊕ original), así que un formato de flag conocido ya es suficiente para romperlo.
 
 ## Contexto defensivo
 
 <!-- Por qué esta debilidad importa en un entorno real y cómo se evita. Elimina la sección si no aplica. -->
-Esta vulnerabilidad demostró que usar claves XOR cortas no es seguro, porque si el atacante conoce parte del texto original, puede recuperar segmentos de la clave mediante un ataque llamado Known Plaintext Attack y posterior a eso descifrar el mensaje. Se recomienda usar algortimos critograficos modernos como por ejemplo AES. Adicional podemos ver que tan importante mantener puertos bloqueados ya que estas conexiones remotas permiten filtracion de información.
+Esta vulnerabilidad demostró que usar claves XOR cortas no es seguro, porque si el atacante conoce parte del texto original, puede recuperar segmentos de la clave mediante Known Plaintext Attack y despues descifrar el mensaje. Se recomienda usar algoritmos critográficos modernos como por ejemplo AES.
 
 
 ## Lecciones aprendidas y próximos pasos
