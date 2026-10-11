@@ -14,6 +14,8 @@ Repositorio donde documento los laboratorios, retos y ejercicios que realizo par
 * Mostrar cómo cada ataque se mapea a **MITRE ATT&CK** y cómo se detecta o se mitiga.
 * Construir un portafolio sólido que respalde mi perfil profesional.
 
+---
+
 ## Enfoque
 
 * **Razonamiento antes que comandos:** cada writeup incluye lo que intenté y no funcionó.
@@ -55,6 +57,8 @@ security-labs/
 
 > La categoría de cada reto (crypto, web, privesc, blue-team…) va en los metadatos del writeup y en los índices, no en subcarpetas.
 
+---
+
 ## Qué plantilla uso
 
 | Plantilla | Cuándo la uso | Incluye |
@@ -62,6 +66,8 @@ security-labs/
 | [`full-chain`](templates/full-chain.md) | Máquinas completas | Enumeración, explotación, post-explotación, detección, MITRE, mitigaciones |
 | [`single-skill`](templates/single-skill.md) | Cripto, decodificación, forensics, una técnica puntual | Datos conocidos, análisis, solución, script, técnica aprendida |
 | [`blue-team`](templates/blue-team.md) | Detección, logs, respuesta a incidentes | Línea de tiempo, IOCs, regla de detección, contención |
+
+---
 
 ## Tipos de reto y categorías
 
@@ -74,6 +80,7 @@ security-labs/
 
 **Categorías:** `crypto` · `encoding` · `web` · `network` · `privesc` · `forensics` · `blue-team` · `full-chain`
 
+<!--
 ---
 
 ## Writeups destacados
@@ -99,7 +106,7 @@ El listado detallado de cada plataforma está en su propio índice, por ejemplo 
 | Herramienta | Descripción |
 |---|---|
 | [`scripts/xor-solver`](scripts/xor-solver/) | Recupera la clave de un XOR de clave repetida a partir de texto conocido (prefijo y sufijo de la flag) |
-
+-->
 ---
 
 ## Notas importantes
@@ -107,6 +114,8 @@ El listado detallado de cada plataforma está en su propio índice, por ejemplo 
 * Nunca publico flags literales ni credenciales sensibles (uso `THM{REDACTED}`).
 * Todo se hace en entornos controlados y éticos. Detalles en [`docs/ethics-scope.md`](docs/ethics-scope.md).
 * Se documentan también medidas defensivas (blue team mindset).
+
+---
 
 ## Recursos de referencia
 
@@ -119,6 +128,7 @@ El listado detallado de cada plataforma está en su propio índice, por ejemplo 
 * [Sigma Rules](https://github.com/SigmaHQ/sigma)
 * [CyberChef](https://gchq.github.io/CyberChef/)
 
+---
 
 ## Redes Sociales
 
