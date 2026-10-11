@@ -24,9 +24,9 @@ El nombre de la carpeta va en minúsculas y con guiones, igual que el slug de la
 
 | Fecha | Sala | Tipo | Categoría | Dificultad | Técnicas (MITRE) | Estado |
 |---|---|---|---|---|---|---|
-| YYYY-MM-DD | [Nombre de la sala](nombre-de-la-sala/README.md) | guided-room | web | easy | T1190 | completado |
+| 2026-10-11 | W1seGuy | challenge | crypto | easy | N/A | completado |
 
-> Reemplaza la fila de ejemplo por tus salas reales y añade una fila nueva por cada writeup, la más reciente arriba.
+<!-- > Reemplaza la fila de ejemplo por tus salas reales y añade una fila nueva por cada writeup, la más reciente arriba. -->
 
 ## Índice por categoría
 
@@ -34,7 +34,7 @@ Cuando haya varios writeups, agrúpalos aquí para encontrarlos rápido.
 
 **Crypto y decodificación**
 
-* *(aún sin writeups)*
+* *[W1seGuy](w1seguy/README.md)*
 
 **Web y red**
 
@@ -58,6 +58,7 @@ Cuando haya varios writeups, agrúpalos aquí para encontrarlos rápido.
 | Cripto, decodificación, técnica puntual | [`single-skill`](../templates/single-skill.md) |
 | Detección y respuesta | [`blue-team`](../templates/blue-team.md) |
 
+<!--
 ## Cómo añadir una sala nueva
 
 1. Crea la carpeta `tryhackme/<slug-de-la-sala>/` con una subcarpeta `screenshots/`.
@@ -65,3 +66,4 @@ Cuando haya varios writeups, agrúpalos aquí para encontrarlos rápido.
 3. Rellena los metadatos del inicio y elimina las secciones que no apliquen.
 4. Censura flags, contraseñas y hashes, y repasa la lista de revisión de [`docs/ethics-scope.md`](../docs/ethics-scope.md).
 5. Añade la fila en la tabla de este índice y, si es de las mejores, en "Writeups destacados" del README principal.
+-->
