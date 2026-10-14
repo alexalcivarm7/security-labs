@@ -36,7 +36,7 @@ Cuando haya varios writeups, agrúpalos aquí para encontrarlos rápido.
 **Crypto y decodificación**
 
 * *[W1seGuy](w1seguy/README.md)*
-* *[Dig Dug](digdugy/README.md)*
+* *[Dig Dug](digdug/README.md)*
 
 **Web y red**
 
