@@ -25,6 +25,7 @@ El nombre de la carpeta va en minúsculas y con guiones, igual que el slug de la
 | Fecha | Sala | Tipo | Categoría | Dificultad | Técnicas (MITRE) | Estado |
 |---|---|---|---|---|---|---|
 | 2026-10-11 | W1seGuy | challenge | crypto | easy | N/A | completado |
+| 2026-10-14 | Dig Dug | challenge | network | easy | T1590.002 | completado |
 
 <!-- > Reemplaza la fila de ejemplo por tus salas reales y añade una fila nueva por cada writeup, la más reciente arriba. -->
 
@@ -35,6 +36,7 @@ Cuando haya varios writeups, agrúpalos aquí para encontrarlos rápido.
 **Crypto y decodificación**
 
 * *[W1seGuy](w1seguy/README.md)*
+* *[Dig Dug](digdugy/README.md)*
 
 **Web y red**
 
